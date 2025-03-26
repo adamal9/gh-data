@@ -4,7 +4,7 @@ on:
     branches:
       - main
   workflow_dispatch:
-  
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -28,7 +28,7 @@ jobs:
       - name: Build website
         run: npm run build
       - name: Upload artifacts
-        run: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3
         with:
           name: dist-files
           path: |
